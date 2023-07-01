@@ -1,20 +1,30 @@
-import React from "react";
+import React, { useContext } from 'react';
+import { Link } from 'react-router-dom';
+import { ContextGlobal } from './utils/global.context';
+import './Card.css';
 
+const Card = ({ dentist }) => {
+  
+  const { state, dispatch } = useContext(ContextGlobal);
+  const { theme } = state;
 
-const Card = ({ name, username, id }) => {
+  const isFav = state.favs.some(fav => fav.id === dentist.id);
 
-  const addFav = ()=>{
-    // Aqui iria la logica para agregar la Card en el localStorage
-  }
+  const toggleFav = () => {
+    dispatch({ type: 'TOGGLE_FAV', payload: dentist });
+  };
 
   return (
-    <div className="card">
-        {/* En cada card deberan mostrar en name - username y el id */}
-
-        {/* No debes olvidar que la Card a su vez servira como Link hacia la pagina de detalle */}
-
-        {/* Ademas deberan integrar la logica para guardar cada Card en el localStorage */}
-        <button onClick={addFav} className="favButton">Add fav</button>
+    <div className={`Card card shadow-sm mb-4 ${theme}`}>
+      <img className="card-img-top" src='/images/doctor.jpg' alt='doctor' />
+      <div className="card-body">
+        <h5 className="card-title">{dentist.name}</h5>
+        <p className="card-text">{dentist.email}</p>
+        <Link className="btn btn-primary" to={`/dentist/${dentist.id}`}>Details</Link>
+        <button className={`btn btn-${isFav ? 'danger' : 'success'} ml-2`} onClick={toggleFav}>
+          {isFav ? 'Remove from favs' : 'Add to favs'}
+        </button>
+      </div>
     </div>
   );
 };

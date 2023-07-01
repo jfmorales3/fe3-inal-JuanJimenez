@@ -1,0 +1,12 @@
+.Card {
+    width: 18rem;
+  }
+  .Card.light {
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+.Card.dark {
+    background-color: #1b1919;
+    color: #f8f9fa;
+}

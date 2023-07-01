@@ -1,0 +1,18 @@
+.Detail.light {
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+.Detail.dark {
+    background-color: #333;
+    color: #f8f9fa;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}

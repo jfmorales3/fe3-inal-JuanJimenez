@@ -1,0 +1,20 @@
+.footer.light {
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+.footer.dark {
+    background-color: #5e5a5a;
+    color: #f8f9fa;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.logo {
+    width: 300px;
+}

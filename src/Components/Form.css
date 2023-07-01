@@ -1,0 +1,13 @@
+.form-container.light {
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+.form-container.dark {
+    background-color: #333;
+    color: #f8f9fa;
+}
+
+.contact-container {
+    margin-bottom: 2rem;
+}

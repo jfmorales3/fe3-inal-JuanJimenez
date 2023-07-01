@@ -1,0 +1,10 @@
+/* ErrorMessage.css */
+.error-message {
+    margin-top: 1rem;
+    padding: 10px;
+    color: white;
+    border-radius: 5px;
+    background-color: crimson;
+    
+}
+

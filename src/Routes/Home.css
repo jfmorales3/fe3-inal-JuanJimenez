@@ -1,0 +1,14 @@
+.Main.light {
+    background-color: #f8f9fa;
+    color: #333;
+  }
+  
+  .Main.dark {
+    background-color: #333;
+    color: #f8f9fa;
+  }
+  
+  .card-grid {
+    justify-content: space-around;
+  }
+  
